@@ -1,0 +1,49 @@
+{
+  "name": "websitetemplate",
+  "version": "1.0.0",
+  "description": "Website Template",
+  "main": "pages/index.js",
+  "private": true,
+  "scripts": {
+    "dev": "node ./server",
+    "build": "next build",
+    "start": "NODE_ENV=production node ./server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "dotenv-webpack": "^1.5.7",
+    "express": "^4.16.3",
+    "helmet": "^3.12.1",
+    "material-ui": "^1.0.0-beta.44",
+    "next": "^6.0.4-canary.3",
+    "nodemailer": "^4.6.6",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.3.0",
+    "smoothscroll-polyfill": "^0.4.3",
+    "styled-components": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-styled-components": "^1.5.1",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1"
+  }
+}
