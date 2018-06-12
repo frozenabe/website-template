@@ -81,7 +81,7 @@ export default () => (
       <StudentCompany src="" />
     </StudentProfile>
     <StudenComment>
-      Write Something Useful
+      “Hello World”
     </StudenComment>
   </StudentCard>
 );

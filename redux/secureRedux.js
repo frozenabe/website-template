@@ -19,7 +19,6 @@ function getOrCreateStore(initialState) {
   return window[__NEXT_REDUX_STORE__];
 }
 
-/* eslint react/sort-comp: 0 */
 export default App => (
   class Redux extends Component {
     static async getInitialProps(appContext) {

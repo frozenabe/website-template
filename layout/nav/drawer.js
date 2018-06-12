@@ -95,7 +95,7 @@ export default ({ handleDrawer, isFirst, sticky }) => (
             href="/"
             variant="raised"
           >
-            Button
+            StyledButton
           </StyledButton>
           <StyledP>Write Something Useful</StyledP>
         </ButtonContainer>

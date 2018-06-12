@@ -18,7 +18,7 @@ const ContentsInfo = styled.div`
 export default () => (
   <Wrapper>
     <ContentsInfo>
-      Write Something Useful
+      Info
     </ContentsInfo>
   </Wrapper>
 );

@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  grey,
-  lightGrey,
-  greyBlue,
-  channelIOBlue,
-} from '../../styles/colors';
+import { grey, lightGrey, greyBlue, channelIOBlue } from '../../styles/colors';
 
 const Wrapper = styled.div`
   padding-bottom: 1rem;
@@ -52,9 +47,7 @@ const StyledSpan = styled.span`
       border: none;
       margin: 0 0.5rem;
     }
-  }
-
-  
+  }  
 `;
 
 const Arrow = styled.span`
@@ -69,18 +62,18 @@ const Arrow = styled.span`
 `;
 
 const goToThisImage = (i) => {
-  document.getElementById(`named-image-${i}`).scrollIntoView({ block: 'start', behavior: 'smooth' });
+  document.getElementById(`item-image-${i}`).scrollIntoView({ block: 'start', behavior: 'smooth' });
 };
 
-const IMAGE_LIST = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const ITEMs = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 export default () => (
   <Wrapper>
     <StyledP>Title</StyledP>
     <StyledDiv>
-      {IMAGE_LIST.map((list, i) => (
-        <StyledSpan key={`list-span-${i * 10}`} onClick={() => goToThisImage(i)}>
-          {list}
+      {ITEMs.map((item, i) => (
+        <StyledSpan key={`item-span-${i * 10}`} onClick={() => goToThisImage(i)}>
+          {item}
         </StyledSpan>
       ))}
     </StyledDiv>

@@ -186,7 +186,7 @@ export default ({
             aria-haspopup="true"
             onClick={handleButtonOpen}
           >
-            Consult
+            StyledButton
           </StyledButton>
           <StyledMenu
             id="fade-menu"
@@ -204,9 +204,9 @@ export default ({
           </StyledP>
         </Location>
         <LocationImg>
-          {tab === 0 && <TabContainer><StyledImg>Div or Image1</StyledImg></TabContainer>}
-          {tab === 1 && <TabContainer><StyledImg>Div or Image2</StyledImg></TabContainer>}
-          {tab === 2 && <TabContainer><StyledImg>Div or Image3</StyledImg></TabContainer>}
+          {tab === 0 && <TabContainer><StyledImg>Img1</StyledImg></TabContainer>}
+          {tab === 1 && <TabContainer><StyledImg>Img2</StyledImg></TabContainer>}
+          {tab === 2 && <TabContainer><StyledImg>Img3</StyledImg></TabContainer>}
           <StyledAppBar position="static">
             <Tabs
               value={tab}

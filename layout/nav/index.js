@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { navHeight, containerWidth } from '../../styles/layout';
 import Hamburger from './hamburger';
 import ToTop from '../../components/toTop';
-import Buy from './buy';
+import BuyOrConsign from './buyOrConsign';
 import Drawer from './drawer';
 
 const Wrapper = styled.div`
@@ -107,7 +107,7 @@ class Nav extends Component {
             sticky={sticky}
           />
           <LogContainer>
-            <Buy sticky={sticky} isFirst={isFirst} />
+            <BuyOrConsign sticky={sticky} isFirst={isFirst} />
           </LogContainer>
           <ToTop />
         </Container>

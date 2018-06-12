@@ -27,12 +27,11 @@ app.prepare()
     server.use('/api/mailer', mailer);
 
     server.get('*', (req, res) => handle(req, res));
-
-    /* eslint no-console: 0 */
     server.listen(PORT, (err) => {
       if (err) {
         throw err;
       }
+      /* eslint no-console: 0 */
       console.log(`> Ready on http://localhost:${PORT}`);
     });
   });

@@ -73,8 +73,7 @@ const StyledList = styled.div`
   }
 `;
 
-// div to img
-const StyledImg = styled.div`
+const StyledImg = styled.img`
   height: 12rem;
   margin-top: 4rem;
   border-top-left-radius: 16px;
@@ -85,19 +84,19 @@ const StyledImg = styled.div`
   }
 `;
 
-const IMAGE_LIST = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const ITEMs = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 export default () => (
   <Wrapper>
     <OverviewContainer>
-      <OverviewTitle>SERVICE</OverviewTitle>
+      <OverviewTitle>Title</OverviewTitle>
       <Overview>
         Write Something Useful
       </Overview>
       <ListContainer>
-        {IMAGE_LIST.map((img, i) => (
-          <StyledList id={`named-image-${i}`} key={`image-list-${i * 10}`}>
-            <StyledImg>{img}</StyledImg>
+        {ITEMs.map((img, i) => (
+          <StyledList id={`item-image-${i}`} key={`image-list-${i * 10}`}>
+            <StyledImg src={ITEMs[i]} />
           </StyledList>
         ))}
       </ListContainer>

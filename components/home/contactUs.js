@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { turquoise, superTurquoise } from '../../styles/colors';
-import { handleBuy } from '../../layout/nav/buy';
+import { handleBuyOrConsign } from '../../layout/nav/buyOrConsign';
 
 const Wrapper = styled.div`
   height: 11rem;
@@ -57,7 +57,7 @@ const StyledA = styled.a`
 
 export default () => (
   <Wrapper>
-    <StyledP>Write Something Useful</StyledP>
-    <StyledA onClick={handleBuy}>Node-mailer</StyledA>
+    <StyledP>Title</StyledP>
+    <StyledA onClick={handleBuyOrConsign}>StyledButton</StyledA>
   </Wrapper>
 );

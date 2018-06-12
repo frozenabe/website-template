@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// img to div
+// div -> img
 const LogoImg = styled.div`
   display: ${({ sticky, isFirst }) => (!isFirst || sticky ? 'block' : 'none')};
   height: 2.4rem;
@@ -17,6 +17,7 @@ export default ({ sticky, isFirst }) => (
   <div>
     {isFirst ? (
       <LogoImg
+        src=""
         onClick={handleToTop}
         sticky={sticky}
         isFirst={isFirst}
@@ -25,7 +26,9 @@ export default ({ sticky, isFirst }) => (
       </LogoImg>
     ) : (
       <a href="/">
-        <LogoImg>LOGO</LogoImg>
+        <LogoImg src="">
+          LOGO
+        </LogoImg>
       </a>
     )}
   </div>

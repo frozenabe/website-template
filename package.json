@@ -1,7 +1,7 @@
 {
-  "name": "websitetemplate",
+  "name": "moedim",
   "version": "1.0.0",
-  "description": "Website Template",
+  "description": "Moedim Crypto Website",
   "main": "pages/index.js",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@zeit/next-css": "^0.2.0",
+    "aws-sdk": "^2.255.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "compression": "^1.7.2",
@@ -22,7 +23,7 @@
     "helmet": "^3.12.1",
     "material-ui": "^1.0.0-beta.44",
     "next": "^6.0.4-canary.3",
-    "nodemailer": "^4.6.6",
+    "nodemailer": "^4.6.5",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",

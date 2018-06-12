@@ -1,7 +1,7 @@
 # Website Template
 
-* React (Next.js)
-* Redux
-* Express
-* Node-Mailer
-* Material-UI
+# React (Next.js)
+# Redux
+# Nodemailer
+# Material-UI
+# Styled-Components

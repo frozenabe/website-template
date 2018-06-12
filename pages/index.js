@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 
 import Layout from '../layout';
 import Headline from '../components/home/headline';
-import Items from '../components/home/items';
+import CryptoItems from '../components/home/cryptoItems';
 import CurrentStats from '../components/home/currentStats';
 import OurServices from '../components/home/ourServices';
 import OurMembers from '../components/home/ourMembers';
 import ContactUs from '../components/home/contactUs';
 import Consult from '../components/home/consult';
-import { changeSample } from '../redux/actions/sample';
+import { changeUserInfo } from '../redux/actions/user';
 import {
   isIE,
   isEdge,
@@ -25,8 +25,8 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    const { _changeSample } = this.props;
-    _changeSample([]);
+    const { _changeUserInfo } = this.props;
+    _changeUserInfo([]);
     if (isIE || isEdge || isOpera) {
       document.getElementById('get-chrome').style.display = 'block';
     } else if (isFirefox || isSafari) {
@@ -44,7 +44,7 @@ class Main extends Component {
       const readableHour = value.toString().slice(0, 2);
       const readableMinute = value.toString().slice(2);
       document.getElementById('sales-modal').classList.toggle('view');
-      document.getElementById('writings').value = `I would like to make a reservation at ${readableHour}: ${readableMinute}.`;
+      document.getElementById('comment').value = `${readableHour}: ${readableMinute}`;
     }
     this.setState({
       button: null,
@@ -56,7 +56,7 @@ class Main extends Component {
     return (
       <Layout isFirst>
         <Headline />
-        <Items />
+        <CryptoItems />
         <CurrentStats />
         <OurServices />
         <OurMembers />
@@ -74,7 +74,7 @@ class Main extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  _changeSample: sample => dispatch(changeSample(sample)),
+  _changeUserInfo: userInfo => dispatch(changeUserInfo(userInfo)),
 });
 
 export default connect(null, mapDispatchToProps)(Main);

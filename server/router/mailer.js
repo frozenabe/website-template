@@ -1,5 +1,10 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
+const aws = require('aws-sdk');
+
+const awsConfig = require('../utils/awsConfig');
+
+aws.config.update(awsConfig);
 
 router.post('/email', (req, res) => {
   const {
@@ -11,25 +16,22 @@ router.post('/email', (req, res) => {
   } = req.body;
   const newDate = date.split('T')[0];
   const transporter = nodemailer.createTransport({
-    service: '<< gmail? >>',
-    auth: {
-      user: '<< Email goes here >>',
-      pass: '<< Password goes here >>',
-    },
+    SES: new aws.SES({
+      apiVersion: '2010-12-01',
+    }),
+    sendingRate: 1,
   });
 
   const mailOptions = {
-    from: `"<< This Website >>" <${email}>`,
-    to: '<< Email goes here >>',
-    subject: '...',
-    html: `
-      <b>Date: ${newDate}</b><br />
-      <br />
-      <b>Name: ${name}</b><br />
-      <br />
-      <b>Phone: ${phone}</b><br />
-      <br />
-      <b>Comments: ${writings}</b><br />
+    from: process.env.MOEDIM_EMAIL,
+    to: process.env.MOEDIM_EMAIL,
+    subject: '구매/위탁 문의입니다.',
+    text: `
+      ${email} \n
+      ${newDate} \n
+      이름: ${name} \n
+      전화번호: ${phone} \n
+      요청 글: ${writings} \n
     `,
   };
 
@@ -38,7 +40,7 @@ router.post('/email', (req, res) => {
     if (err) {
       return console.log(err);
     }
-    return res.send('ok');
+    return res.status(200).send('ok');
   });
 });
 

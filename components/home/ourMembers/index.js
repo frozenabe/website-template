@@ -61,7 +61,7 @@ const handleToNext = () => {
 export default () => (
   <Wrapper>
     <Container>
-      <StyledH2>Our Team</StyledH2>
+      <StyledH2>Title</StyledH2>
       <StyledDiv>
         <Member />
         <Member />
@@ -72,7 +72,7 @@ export default () => (
         variant="raised"
         onClick={handleToNext}
       >
-        Write Something Useful
+        StyledButton
       </StyledButton>
       <ToConsult id="to-consult" />
     </Container>

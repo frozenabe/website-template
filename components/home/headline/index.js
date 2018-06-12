@@ -84,6 +84,14 @@ const ToCryptoItems = styled.div`
   bottom: 0;
 `;
 
+// const VideoFrame = styled.iframe`
+//   position: absolute;
+//   bottom: 0;
+//   height: 100%;
+//   width: 100%;
+//   z-index: -1;
+// `;
+
 const handleToNext = () => {
   document.getElementById('to-ourservices').scrollIntoView({ block: 'start', behavior: 'smooth' });
 };
@@ -91,13 +99,13 @@ const handleToNext = () => {
 export default () => (
   <Headline id="headline">
     <StyledImg src="" />
-    <Title>LOGO or TITLE</Title>
+    <Title>LOGO</Title>
     <Info>Write Something Useful</Info>
     <StyledButton
       variant="flat"
       onClick={handleToNext}
     >
-      Check Our Service
+      StyledButton
     </StyledButton>
     <ToNext />
     <ToCryptoItems id="to-companies" />

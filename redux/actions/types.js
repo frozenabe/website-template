@@ -1,4 +1,3 @@
-/* eslint import/prefer-default-export: 0 */
-
 // user.js
-export const CHANGE_SAMPLE = 'CHANGE_SAMPLE';
+export const CHANGE_USER_INFO = 'CHANGE_USER_INFO';
+export const DUMMY = 'DUMMY';

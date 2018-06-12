@@ -6,7 +6,7 @@ import { containerWidth } from '../styles/layout';
 import { darkGrey } from '../styles/colors';
 import Layout from '../layout';
 import QnA from '../components/qnaBoard';
-import { changeSample } from '../redux/actions/sample';
+import { changeUserInfo } from '../redux/actions/user';
 
 const Wrapper = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ const LowerContainer = styled.div`
 
 class QnABoard extends Component {
   static async getInitialProps({ reduxStore }) {
-    reduxStore.dispatch(changeSample([]));
+    reduxStore.dispatch(changeUserInfo([]));
     return {};
   }
 

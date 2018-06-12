@@ -51,8 +51,8 @@ const Copyright = styled.span`
 
 export default ({ isFirst, isQnA }) => (
   <Wrapper>
-    <GetChrome id="get-chrome">Chrome Browswer을 다운로드해서 사용해주세요.</GetChrome>
-    <ChromeIsBetter id="chrome-is-better">본 사이트는 Chrome에 최적화 되어있습니다.</ChromeIsBetter>
+    <GetChrome id="get-chrome">Please Use Chrome</GetChrome>
+    <ChromeIsBetter id="chrome-is-better">We Recommend Using Chrome</ChromeIsBetter>
     {isFirst && <ContentsInfo />}
     <BottomFooter>
       <Container>

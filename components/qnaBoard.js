@@ -59,27 +59,27 @@ const Answer = styled.div`
 `;
 
 const questions = [
-  'QUESTION1',
-  'QUESTION2',
-  'QUESTION3',
-  'QUESTION4',
-  'QUESTION5',
-  'QUESTION6',
-  'QUESTION7',
-  'QUESTION8',
-  'QUESTION9',
+  'Q1',
+  'Q2',
+  'Q3',
+  'Q4',
+  'Q5',
+  'Q6',
+  'Q7',
+  'Q8',
+  'Q9',
 ];
 
 const answers = [
-  'ANSWER1',
-  'ANSWER2',
-  'ANSWER3',
-  'ANSWER4',
-  'ANSWER5',
-  'ANSWER6',
-  'ANSWER7',
-  'ANSWER8',
-  'ANSWER9',
+  'A1',
+  'A2',
+  'A3',
+  'A4',
+  'A5',
+  'A6',
+  'A7',
+  'A8',
+  'A9',
 ];
 
 const openAnswer = (index) => {

@@ -128,7 +128,7 @@ const SubmitButton = styled.input`
   outline: none;
 `;
 
-export const handleBuy = () => {
+export const handleBuyOrConsign = () => {
   document.getElementById('sales-modal').classList.toggle('view');
 };
 
@@ -137,17 +137,17 @@ const COLUMNS = ['name', 'phone', 'email', 'comment'];
 export default ({ sticky, isFirst }) => (
   <Wrapper>
     <StyledButton
-      id="buy"
-      onClick={handleBuy}
+      id="buy-or-consign"
+      onClick={handleBuyOrConsign}
       sticky={sticky ? 1 : 0}
       first={isFirst ? 1 : 0}
     >
-      Buy
+      StyledButton
     </StyledButton>
     <ModalWrapper id="sales-modal">
       <ModalNav>
-        <StyledDiv>Buy</StyledDiv>
-        <StyledSvg onClick={handleBuy}>
+        <StyledDiv>Nodemailer</StyledDiv>
+        <StyledSvg onClick={handleBuyOrConsign}>
           <path d="M0 0H30V5H0z" fill="#fff" />
         </StyledSvg>
       </ModalNav>
@@ -162,8 +162,8 @@ export default ({ sticky, isFirst }) => (
           data.date = new Date();
           axios.post('/api/mailer/email', data)
             .then(() => {
-              handleBuy();
-              alert('Thank you.');
+              handleBuyOrConsign();
+              alert('email was successfully sent');
             });
         }}
       >
@@ -172,8 +172,8 @@ export default ({ sticky, isFirst }) => (
           <StyledInput id="name" required />
         </Row>
         <Row>
-          <Label>Phone</Label>
-          <StyledInput id="phone" type="phone" required />
+          <Label>Number</Label>
+          <StyledInput id="phone" type="number" required />
         </Row>
         <Row>
           <Label>Email</Label>
@@ -183,7 +183,7 @@ export default ({ sticky, isFirst }) => (
           <Label>Comment</Label>
           <StyledTextArea id="writings" required />
         </Row>
-        <SubmitButton type="submit" value="comment" />
+        <SubmitButton type="submit" value="send" />
       </StyledForm>
     </ModalWrapper>
   </Wrapper>

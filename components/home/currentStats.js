@@ -60,15 +60,15 @@ export default () => (
     <Container>
       <InnerContainer>
         <StyledSpan>#</StyledSpan>
-        <StyledText>STAT1</StyledText>
+        <StyledText>Service1</StyledText>
       </InnerContainer>
       <InnerContainer>
         <StyledSpan>#</StyledSpan>
-        <StyledText>STAT2</StyledText>
+        <StyledText>Service2</StyledText>
       </InnerContainer>
       <InnerContainer>
         <StyledSpan>#</StyledSpan>
-        <StyledText>STAT3</StyledText>
+        <StyledText>Service3</StyledText>
       </InnerContainer>
     </Container>
     <ToOurServices id="to-ourservices" />
